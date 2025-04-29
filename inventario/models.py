@@ -7,9 +7,6 @@ class Producto(models.Model):
     price = models.DecimalField(max_digits=8, decimal_places=2)
     stock = models.PositiveIntegerField()
 
-    def __str__(self):
-        return self.name
-
 class Pedido (models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     date = models.DateField(auto_now_add= True)
